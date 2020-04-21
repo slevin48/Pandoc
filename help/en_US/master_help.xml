@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a75a38c7e73f14404f991ad35c3596129 SYSTEM "file:///C:/Users/ydb/devel/Pandoc/help/en_US/Pandoc_getpath.xml">
+<!ENTITY a4419bbe117eece0caa1a6dedc2b60703 SYSTEM "file:///C:/Users/ydb/devel/Pandoc/help/en_US/pandoc.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='pandoc_manual'>
+    <title>Pandoc</title>
+  </info>
+
+<part xml:id='section_25d40fb0ea9a1a678b2daa394f04ad0a'>
+<title>Pandoc</title>
+&a75a38c7e73f14404f991ad35c3596129;
+&a4419bbe117eece0caa1a6dedc2b60703;
+</part>
+</book>
