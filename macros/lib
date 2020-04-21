@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scilablib name="Pandoclib">
-  <macro name="Pandoc_getpath" file="Pandoc_getpath.bin" md5="39088378ef0a7ff941a782465f448148"/>
-  <macro name="pandoc" file="pandoc.bin" md5="f265c888ef390723542aa81ec4d7d666"/>
-</scilablib>
