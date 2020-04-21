@@ -35,18 +35,106 @@
     <div class="refnamediv"><h1 class="refname">pandoc</h1>
         <p class="refpurpose">Short description</p></div>
     <div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
-        <div class="synopsis"><pre><span class="default">result</span><span class="default"> = </span><span class="functionid">pandoc</span><span class="default">(</span><span class="default">argument#1</span><span class="default">, </span><span class="default">argument#2</span><span class="default">)</span></pre></div></div>
+        <div class="synopsis"><pre><span class="functionid">pandoc</span><span class="default">(</span><span class="default">from</span><span class="default">,</span><span class="default">to</span><span class="default">,</span><span class="default">input_file</span><span class="default">,</span><span class="default">output_file</span><span class="default">)</span></pre></div></div>
     <div class="refsection"><h3 class="title">Arguments</h3>
-        <dl><dt><span class="term">argument#1</span>
-                <dd><p class="para">argument#1 type and description.</p></dd></dt>
-            <dt><span class="term">argument#2</span>
-                <dd><p class="para">argument#2 type and description.</p></dd></dt>
-            <dt><span class="term">resultat</span>
-                <dd><p class="para">Resultat description</p></dd></dt></dl></div>
+        <dl><dt><span class="term">from</span>
+                <dd><p class="para">precise the input format (markdown, docbook, html,...)</p></dd></dt>
+            <dt><span class="term">to</span>
+                <dd><p class="para">precise the output format (html, doc, ppt, ...)</p></dd></dt>
+            <dt><span class="term">input_file</span>
+                <dd><p class="para">give the path to the input file</p></dd></dt>
+            <dt><span class="term">output_file</span>
+                <dd><p class="para">give the path to the output file</p></dd></dt></dl></div>
     <div class="refsection"><h3 class="title">Description</h3>
-        <dl><dt><dd><p class="para">Function description.</p></dd></dt></dl></div>
+        <dl><dt><dd><p class="para">This is a simple wrapping of the command line tool Pandoc available here: https://pandoc.org/</p>
+                    <ul class="itemizedlist"><li><p class="para"><code class="literal" dir="ltr">commonmark</code>
+                          (<a href="https://commonmark.org" class="ulink">CommonMark</a>
+                          Markdown)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">creole</code>
+                          (<a href="http://www.wikicreole.org/wiki/Creole1.0" class="ulink">Creole
+                          1.0</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">csv</code>
+                          (<a href="https://tools.ietf.org/html/rfc4180" class="ulink">CSV</a>
+                          table)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">docbook</code>
+                          (<a href="https://docbook.org" class="ulink">DocBook</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">docx</code>
+                          (<a href="https://en.wikipedia.org/wiki/Office_Open_XML" class="ulink">Word
+                          docx</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">dokuwiki</code>
+                          (<a href="https://www.dokuwiki.org/dokuwiki" class="ulink">DokuWiki
+                          markup</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">epub</code>
+                          (<a href="http://idpf.org/epub" class="ulink">EPUB</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">fb2</code>
+                          (<a href="http://www.fictionbook.org/index.php/Eng:XML_Schema_Fictionbook_2.1" class="ulink">FictionBook2</a>
+                          e-book)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">gfm</code>
+                          (<a href="https://help.github.com/articles/github-flavored-markdown/" class="ulink">GitHub-Flavored
+                          Markdown</a>), or the deprecated and less accurate
+                          <code class="literal" dir="ltr">markdown_github</code>; use
+                          <a href="https://pandoc.org/MANUAL.html#markdown-variants" class="ulink"><code class="literal" dir="ltr">markdown_github</code></a>
+                          only if you need extensions not supported in
+                          <a href="https://pandoc.org/MANUAL.html#markdown-variants" class="ulink"><code class="literal" dir="ltr">gfm</code></a>.</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">haddock</code>
+                          (<a href="https://www.haskell.org/haddock/doc/html/ch03s08.html" class="ulink">Haddock
+                          markup</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">html</code>
+                          (<a href="https://www.w3.org/html/" class="ulink">HTML</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">ipynb</code>
+                          (<a href="https://nbformat.readthedocs.io/en/latest/" class="ulink">Jupyter
+                          notebook</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">jats</code>
+                          (<a href="https://jats.nlm.nih.gov" class="ulink">JATS</a> XML)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">jira</code>
+                          (<a href="https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all" class="ulink">Jira</a>
+                          wiki markup)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">json</code> (JSON version of native AST)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">latex</code>
+                          (<a href="https://www.latex-project.org/" class="ulink">LaTeX</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">markdown</code>
+                          (<a href="https://pandoc.org/MANUAL.html#pandocs-markdown" class="ulink">Pandoc’s
+                          Markdown</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">markdown_mmd</code>
+                          (<a href="https://fletcherpenney.net/multimarkdown/" class="ulink">MultiMarkdown</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">markdown_phpextra</code>
+                          (<a href="https://michelf.ca/projects/php-markdown/extra/" class="ulink">PHP
+                          Markdown Extra</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">markdown_strict</code> (original unextended
+                          <a href="https://daringfireball.net/projects/markdown/" class="ulink">Markdown</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">mediawiki</code>
+                          (<a href="https://www.mediawiki.org/wiki/Help:Formatting" class="ulink">MediaWiki
+                          markup</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">man</code>
+                          (<a href="https://man.cx/groff_man(7)" class="ulink">roff man</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">muse</code>
+                          (<a href="https://amusewiki.org/library/manual" class="ulink">Muse</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">native</code> (native Haskell)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">odt</code>
+                          (<a href="https://en.wikipedia.org/wiki/OpenDocument" class="ulink">ODT</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">opml</code>
+                          (<a href="http://dev.opml.org/spec2.html" class="ulink">OPML</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">org</code> (<a href="https://orgmode.org" class="ulink">Emacs
+                          Org mode</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">rst</code>
+                          (<a href="https://docutils.sourceforge.io/docs/ref/rst/introduction.html" class="ulink">reStructuredText</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">t2t</code>
+                          (<a href="https://txt2tags.org" class="ulink">txt2tags</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">textile</code>
+                          (<a href="https://www.promptworks.com/textile" class="ulink">Textile</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">tikiwiki</code>
+                          (<a href="https://doc.tiki.org/Wiki-Syntax-Text#The_Markup_Language_Wiki-Syntax" class="ulink">TikiWiki
+                          markup</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">twiki</code>
+                          (<a href="https://twiki.org/cgi-bin/view/TWiki/TextFormattingRules" class="ulink">TWiki
+                          markup</a>)</p></li>
+                      <li><p class="para"><code class="literal" dir="ltr">vimwiki</code>
+                          (<a href="https://vimwiki.github.io" class="ulink">Vimwiki</a>)</p></li></ul></dd></dt></dl></div>
     <div class="refsection"><h3 class="title">Examples</h3>
-        <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">pandoc</span><span class="scilabopenclose">(</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+        <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">//This example translate scilab documentation formated as docbook, into HTML</span>
+<span class="scilabid">pandoc</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">docbook</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">html</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">foo.xml</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">foo.html</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabcomment">//This is the equivalent command line</span>
+<span class="scilabcomment">//pandoc -f docbook -t html foo.xml -o foo.html</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
     <div class="refsection"><h3 class="title">See also</h3>
         <ul class="itemizedlist"><li class="member"><a href="scilab://another_function_name" class="link">another_function_name</a></li></ul></div>
     <br />

@@ -27,12 +27,593 @@
                 <term>from</term>
                 <listitem>
                     <para>precise the input format (markdown, docbook, html,...)</para>
+                    <para>It can convert
+                        <emphasis>from</emphasis>
+                    </para>
+                    <itemizedlist spacing="compact">
+                      <listitem>
+                        <para>
+                          <literal>commonmark</literal>
+                          (<ulink url="https://commonmark.org">CommonMark</ulink>
+                          Markdown)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>creole</literal>
+                          (<ulink url="http://www.wikicreole.org/wiki/Creole1.0">Creole
+                          1.0</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>csv</literal>
+                          (<ulink url="https://tools.ietf.org/html/rfc4180">CSV</ulink>
+                          table)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>docbook</literal>
+                          (<ulink url="https://docbook.org">DocBook</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>docx</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/Office_Open_XML">Word
+                          docx</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>dokuwiki</literal>
+                          (<ulink url="https://www.dokuwiki.org/dokuwiki">DokuWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>epub</literal>
+                          (<ulink url="http://idpf.org/epub">EPUB</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>fb2</literal>
+                          (<ulink url="http://www.fictionbook.org/index.php/Eng:XML_Schema_Fictionbook_2.1">FictionBook2</ulink>
+                          e-book)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>gfm</literal>
+                          (<ulink url="https://help.github.com/articles/github-flavored-markdown/">GitHub-Flavored
+                          Markdown</ulink>), or the deprecated and less accurate
+                          <literal>markdown_github</literal>; use
+                          <ulink url="https://pandoc.org/MANUAL.html#markdown-variants"><literal>markdown_github</literal></ulink>
+                          only if you need extensions not supported in
+                          <ulink url="https://pandoc.org/MANUAL.html#markdown-variants"><literal>gfm</literal></ulink>.
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>haddock</literal>
+                          (<ulink url="https://www.haskell.org/haddock/doc/html/ch03s08.html">Haddock
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>html</literal>
+                          (<ulink url="https://www.w3.org/html/">HTML</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>ipynb</literal>
+                          (<ulink url="https://nbformat.readthedocs.io/en/latest/">Jupyter
+                          notebook</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jats</literal>
+                          (<ulink url="https://jats.nlm.nih.gov">JATS</ulink> XML)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jira</literal>
+                          (<ulink url="https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all">Jira</ulink>
+                          wiki markup)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>json</literal> (JSON version of native AST)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>latex</literal>
+                          (<ulink url="https://www.latex-project.org/">LaTeX</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown</literal>
+                          (<ulink url="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s
+                          Markdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_mmd</literal>
+                          (<ulink url="https://fletcherpenney.net/multimarkdown/">MultiMarkdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_phpextra</literal>
+                          (<ulink url="https://michelf.ca/projects/php-markdown/extra/">PHP
+                          Markdown Extra</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_strict</literal> (original unextended
+                          <ulink url="https://daringfireball.net/projects/markdown/">Markdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>mediawiki</literal>
+                          (<ulink url="https://www.mediawiki.org/wiki/Help:Formatting">MediaWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>man</literal>
+                          (<ulink url="https://man.cx/groff_man(7)">roff man</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>muse</literal>
+                          (<ulink url="https://amusewiki.org/library/manual">Muse</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>native</literal> (native Haskell)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>odt</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/OpenDocument">ODT</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>opml</literal>
+                          (<ulink url="http://dev.opml.org/spec2.html">OPML</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>org</literal> (<ulink url="https://orgmode.org">Emacs
+                          Org mode</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>rst</literal>
+                          (<ulink url="https://docutils.sourceforge.io/docs/ref/rst/introduction.html">reStructuredText</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>t2t</literal>
+                          (<ulink url="https://txt2tags.org">txt2tags</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>textile</literal>
+                          (<ulink url="https://www.promptworks.com/textile">Textile</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>tikiwiki</literal>
+                          (<ulink url="https://doc.tiki.org/Wiki-Syntax-Text#The_Markup_Language_Wiki-Syntax">TikiWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>twiki</literal>
+                          (<ulink url="https://twiki.org/cgi-bin/view/TWiki/TextFormattingRules">TWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>vimwiki</literal>
+                          (<ulink url="https://vimwiki.github.io">Vimwiki</ulink>)
+                        </para>
+                      </listitem>
+                    </itemizedlist>
                 </listitem>
             </varlistentry>
             <varlistentry>
                 <term>to</term>
                 <listitem>
                     <para>precise the output format (html, doc, ppt, ...)</para>
+                    <para>
+                      It can convert <emphasis>to</emphasis>
+                    </para>
+                    <anchor id="output-formats" />
+                    <itemizedlist spacing="compact">
+                      <listitem>
+                        <para>
+                          <literal>asciidoc</literal>
+                          (<ulink url="https://www.methods.co.nz/asciidoc/">AsciiDoc</ulink>)
+                          or <literal>asciidoctor</literal>
+                          (<ulink url="https://asciidoctor.org/">AsciiDoctor</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>beamer</literal>
+                          (<ulink url="https://ctan.org/pkg/beamer">LaTeX beamer</ulink>
+                          slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>commonmark</literal>
+                          (<ulink url="https://commonmark.org">CommonMark</ulink>
+                          Markdown)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>context</literal>
+                          (<ulink url="https://www.contextgarden.net/">ConTeXt</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>docbook</literal> or <literal>docbook4</literal>
+                          (<ulink url="https://docbook.org">DocBook</ulink> 4)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>docbook5</literal> (DocBook 5)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>docx</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/Office_Open_XML">Word
+                          docx</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>dokuwiki</literal>
+                          (<ulink url="https://www.dokuwiki.org/dokuwiki">DokuWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>epub</literal> or <literal>epub3</literal>
+                          (<ulink url="http://idpf.org/epub">EPUB</ulink> v3 book)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>epub2</literal> (EPUB v2)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>fb2</literal>
+                          (<ulink url="http://www.fictionbook.org/index.php/Eng:XML_Schema_Fictionbook_2.1">FictionBook2</ulink>
+                          e-book)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>gfm</literal>
+                          (<ulink url="https://help.github.com/articles/github-flavored-markdown/">GitHub-Flavored
+                          Markdown</ulink>), or the deprecated and less accurate
+                          <literal>markdown_github</literal>; use
+                          <ulink url="https://pandoc.org/MANUAL.html#markdown-variants"><literal>markdown_github</literal></ulink>
+                          only if you need extensions not supported in
+                          <ulink url="https://pandoc.org/MANUAL.html#markdown-variants"><literal>gfm</literal></ulink>.
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>haddock</literal>
+                          (<ulink url="https://www.haskell.org/haddock/doc/html/ch03s08.html">Haddock
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>html</literal> or <literal>html5</literal>
+                          (<ulink url="https://www.w3.org/html/">HTML</ulink>,
+                          i.e. <ulink url="https://html.spec.whatwg.org/">HTML5</ulink>/XHTML
+                          <ulink url="https://www.w3.org/TR/html-polyglot/">polyglot
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>html4</literal>
+                          (<ulink url="https://www.w3.org/TR/xhtml1/">XHTML</ulink> 1.0
+                          Transitional)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>icml</literal>
+                          (<ulink url="https://wwwimages.adobe.com/www.adobe.com/content/dam/acom/en/devnet/indesign/sdk/cs6/idml/idml-cookbook.pdf">InDesign
+                          ICML</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>ipynb</literal>
+                          (<ulink url="https://nbformat.readthedocs.io/en/latest/">Jupyter
+                          notebook</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jats_archiving</literal>
+                          (<ulink url="https://jats.nlm.nih.gov">JATS</ulink> XML,
+                          Archiving and Interchange Tag Set)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jats_articleauthoring</literal>
+                          (<ulink url="https://jats.nlm.nih.gov">JATS</ulink> XML,
+                          Article Authoring Tag Set)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jats_publishing</literal>
+                          (<ulink url="https://jats.nlm.nih.gov">JATS</ulink> XML,
+                          Journal Publishing Tag Set)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jats</literal> (alias for
+                          <literal>jats_archiving</literal>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>jira</literal>
+                          (<ulink url="https://jira.atlassian.com/secure/WikiRendererHelpAction.jspa?section=all">Jira</ulink>
+                          wiki markup)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>json</literal> (JSON version of native AST)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>latex</literal>
+                          (<ulink url="https://www.latex-project.org/">LaTeX</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>man</literal>
+                          (<ulink url="https://man.cx/groff_man(7)">roff man</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown</literal>
+                          (<ulink url="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s
+                          Markdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_mmd</literal>
+                          (<ulink url="https://fletcherpenney.net/multimarkdown/">MultiMarkdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_phpextra</literal>
+                          (<ulink url="https://michelf.ca/projects/php-markdown/extra/">PHP
+                          Markdown Extra</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>markdown_strict</literal> (original unextended
+                          <ulink url="https://daringfireball.net/projects/markdown/">Markdown</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>mediawiki</literal>
+                          (<ulink url="https://www.mediawiki.org/wiki/Help:Formatting">MediaWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>ms</literal>
+                          (<ulink url="https://man.cx/groff_ms(7)">roff ms</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>muse</literal>
+                          (<ulink url="https://amusewiki.org/library/manual">Muse</ulink>),
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>native</literal> (native Haskell),
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>odt</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/OpenDocument">OpenOffice
+                          text document</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>opml</literal>
+                          (<ulink url="http://dev.opml.org/spec2.html">OPML</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>opendocument</literal>
+                          (<ulink url="http://opendocument.xml.org">OpenDocument</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>org</literal> (<ulink url="https://orgmode.org">Emacs
+                          Org mode</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>pdf</literal>
+                          (<ulink url="https://www.adobe.com/pdf/">PDF</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>plain</literal> (plain text),
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>pptx</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/Microsoft_PowerPoint">PowerPoint</ulink>
+                          slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>rst</literal>
+                          (<ulink url="https://docutils.sourceforge.io/docs/ref/rst/introduction.html">reStructuredText</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>rtf</literal>
+                          (<ulink url="https://en.wikipedia.org/wiki/Rich_Text_Format">Rich
+                          Text Format</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>texinfo</literal>
+                          (<ulink url="https://www.gnu.org/software/texinfo/">GNU
+                          Texinfo</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>textile</literal>
+                          (<ulink url="https://www.promptworks.com/textile">Textile</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>slideous</literal>
+                          (<ulink url="https://goessner.net/articles/slideous/">Slideous</ulink>
+                          HTML and JavaScript slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>slidy</literal>
+                          (<ulink url="https://www.w3.org/Talks/Tools/Slidy2/">Slidy</ulink>
+                          HTML and JavaScript slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>dzslides</literal>
+                          (<ulink url="http://paulrouget.com/dzslides/">DZSlides</ulink>
+                          HTML5 + JavaScript slide show),
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>revealjs</literal>
+                          (<ulink url="https://revealjs.com/">reveal.js</ulink> HTML5 +
+                          JavaScript slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>s5</literal>
+                          (<ulink url="https://meyerweb.com/eric/tools/s5/">S5</ulink>
+                          HTML and JavaScript slide show)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>tei</literal>
+                          (<ulink url="https://github.com/TEIC/TEI-Simple">TEI
+                          Simple</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>xwiki</literal>
+                          (<ulink url="https://www.xwiki.org/xwiki/bin/view/Documentation/UserGuide/Features/XWikiSyntax/">XWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          <literal>zimwiki</literal>
+                          (<ulink url="https://zim-wiki.org/manual/Help/Wiki_Syntax.html">ZimWiki
+                          markup</ulink>)
+                        </para>
+                      </listitem>
+                      <listitem>
+                        <para>
+                          the path of a custom Lua writer, see
+                          <ulink url="https://pandoc.org/MANUAL.html#custom-writers">Custom
+                          writers</ulink> below
+                        </para>
+                      </listitem>
+                    </itemizedlist>
+                    <para>
+                      Pandoc can also produce PDF output via LaTeX, Groff ms, or HTML.
+                    </para>
                 </listitem>
             </varlistentry>
             <varlistentry>
@@ -54,7 +635,7 @@
         <variablelist>
             <varlistentry>
                 <listitem>
-                    <para>This is a simple wrapping of the command line tool Pandoc available here: https://pandoc.org/</para>
+                    <para>This is a simple wrapping of the command line tool Pandoc available here: <ulink url=https://pandoc.org/>https://pandoc.org/</ulink></para>
                 </listitem>
             </varlistentry>
         </variablelist>
