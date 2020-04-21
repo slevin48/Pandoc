@@ -635,7 +635,7 @@
         <variablelist>
             <varlistentry>
                 <listitem>
-                    <para>This is a simple wrapping of the command line tool Pandoc available here: <ulink url=https://pandoc.org/>https://pandoc.org/</ulink></para>
+                    <para>This is a simple wrapping of the command line tool Pandoc available here: <ulink url="https://pandoc.org/">https://pandoc.org/</ulink></para>
                 </listitem>
             </varlistentry>
         </variablelist>

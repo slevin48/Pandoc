@@ -5,20 +5,6 @@ pandoc --lua-filter tools/update-readme.lua README.template -o README.md
 
 # Pandoc
 
-[![github
-release](https://img.shields.io/github/release/jgm/pandoc.svg?label=current+release)](https://github.com/jgm/pandoc/releases)
-[![hackage
-release](https://img.shields.io/hackage/v/pandoc.svg?label=hackage)](http://hackage.haskell.org/package/pandoc)
-[![homebrew](https://img.shields.io/homebrew/v/pandoc.svg)](http://brewformulas.org/Pandoc)
-[![stackage LTS
-package](http://stackage.org/package/pandoc/badge/lts)](http://stackage.org/lts/package/pandoc)
-[![CircleCI](https://circleci.com/gh/jgm/pandoc.svg?style=svg)](https://circleci.com/gh/jgm/pandoc)
-[![CI
-tests](https://github.com/jgm/pandoc/workflows/CI%20tests/badge.svg)](https://github.com/jgm/pandoc/actions)
-[![license](https://img.shields.io/badge/license-GPLv2+-lightgray.svg)](https://www.gnu.org/licenses/gpl.html)
-[![pandoc-discuss on google
-groups](https://img.shields.io/badge/pandoc-discuss-red.svg?style=social)](https://groups.google.com/forum/#!forum/pandoc-discuss)
-
 ## The universal markup converter
 
 Pandoc is a [Haskell](http://haskell.org) library for converting from
